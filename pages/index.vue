@@ -75,7 +75,7 @@ export default {
     },
     //Construct API link based on filter response
     filterSelection(data) {
-      if (data.launch != undefined && data.year && data.landing) {
+      if (data.launch != undefined && data.year && data.landing != undefined) {
         this.baseUrl = `https://api.spaceXdata.com/v3/launches?limit=100&launch_year=${data.year}&launch_success=${data.launch}&land_success=${data.landing}`;
       } else if (data.year && data.launch != undefined) {
         this.baseUrl = `https://api.spaceXdata.com/v3/launches?limit=100&launch_year=${data.year}&launch_success=${data.launch}`;
