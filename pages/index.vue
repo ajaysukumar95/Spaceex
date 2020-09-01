@@ -63,7 +63,7 @@ export default {
               mission_id:item.mission_id,
               launch_success:item.launch_success,
               launch_year:item.launch_year,
-              land_success: item.rocket.first_stage.cores[0].land_success,
+              land_success: item.rocket.first_stage.cores[item.rocket.first_stage.cores.length-1].land_success
             };
           });
           this.launchDetails = filteredResponse;
